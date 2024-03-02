@@ -1,5 +1,8 @@
 # var
 MODULE  = $(notdir $(CURDIR))
+NOW     = $(shell date +%d%m%y)
+REL     = $(shell git rev-parse --short=4 HEAD)
+BRANCH  = $(shell git rev-parse --abbrev-ref HEAD)
 
 # dir
 CWD  = $(CURDIR)
