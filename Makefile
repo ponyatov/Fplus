@@ -28,7 +28,14 @@ install: doc gz
 update:
 	sudo apt update
 	sudo apt install -yu `cat apt.txt`
-gz:
+gz: \
+	fw/MTKUSBdriver.zip fw/FlashTool_v5.1420.00.rar
+
+fw/MTKUSBdriver.zip:
+	$(CURL) $@ https://cdn.hackaday.io/files/9189393142176/MTKUSBdriver.zip
+fw/FlashTool_v5.1420.00.rar:
+	$(CURL) $@ https://cdn.hackaday.io/files/9189393142176/FlashTool_v5.1420.00%20%20Azeem.rar
+
 ref:
 
 # merge
